@@ -2,12 +2,24 @@
     auteur: Nicolas Chourot
  */
 body {
-    background-color: white;
+    background-image: linear-gradient(45deg, lightgreen, darkgreen);
+}
+.container {
+    margin-bottom: 100px;
 }
 button {
     padding: 2px 3px;
-    font-size: small;
-    color: blue;
+    padding-left:4px;
+    font-size: 14px;
+    color: white;
+    background-color: darkgreen;
+}
+button:hover {
+    background-color: lightgreen;
+}
+.appHeader {
+    color:white;
+    font-weight:bolder;
 }
 .header-container {
     overflow-y: scroll;
@@ -18,17 +30,18 @@ button {
     grid-template-columns: 25% 25% 35% 5% 10%;
 }
 .header-contacts-container div {
-    font-size: large;
+    font-size: 22px;
     font-weight: bold;
     text-align: left;
     padding: 5px;
-    background-color: gray;
+    background-color: green;
     color: white;
 }
 .contact-list-scroll-containter {
-    height: 320px;
+    height: 80vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: white;
 }
 .contact-list-container {
     display: grid;
@@ -40,17 +53,23 @@ button {
 }
 .oddRow {
     background-color: white;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
 }
 .evenRow {
-    background-color: lightcyan;
+    background-color: rgb(220, 255, 220);
+    border-top:1px solid rgb(220, 255, 220);;
+    border-bottom:1px solid rgb(220, 255, 220);;
 }
-
+.selectedRow {
+    border-top:1px solid green;
+    border-bottom:1px solid green;
+}
 .waiting {
     font-size: 14px;
     font-weight: bold;
     color:green;
 }
-
 .httpError {
     font-size: 14px;
     font-weight: bold;
@@ -68,7 +87,7 @@ button {
 .form-contact-container div {
     text-align: left;
     padding: 5px;
-    background-color: lightgray;
+    background-color: lightgreen;
 }
 .array-container {
     border:1px solid black;
@@ -76,8 +95,11 @@ button {
 .cell {
     height: 40px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
-.selectedRow {
-    background-color: darkturquoise;
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
