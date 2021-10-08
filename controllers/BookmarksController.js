@@ -14,18 +14,6 @@ class BookmarksController extends require('./Controller') {
         else
             this.response.JSON(this.bookmarksRepository.getAll());
     }
-    get(){
-        if(name !== "" || name !== null)
-            this.response.JSON(this.bookmarksRepository.get(name));
-        else
-            this.response.JSON(this.bookmarksRepository.getAll());
-    }
-    get(name){
-        if(name !== "" || name !== null)
-            this.response.JSON(this.bookmarksRepository.get());
-        else
-            this.response.JSON(this.bookmarksRepository.getAll());
-    }
     // POST: api/contacts body payload[{"Id": 0, "Name": "...", "Email": "...", "Phone": "..."}]
     post(bookmark){  
         // todo : validate contact before insertion
